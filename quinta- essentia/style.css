@@ -1,0 +1,718 @@
+/* ======================================================
+   1. IMPORTACIÓN DE TIPOGRAFÍAS DE GOOGLE FONTS
+   ====================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+
+/* ======================================================
+   2. REINICIO GENERAL Y MODELO DE CAJA
+   ====================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color:  #E8DFD1; /* Beige cálido */
+    color: #2b2b2b;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style-type: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ======================================================
+   3. ENCABEZADO Y BARRA DE NAVEGACIÓN
+   ====================================================== */
+.header-principal {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color:#E8DFD1;
+    border-bottom: 1px solid rgba(23, 71, 131, 0.15);
+}
+
+.logo h1 {
+    font-size: 24px;
+    color: #174783; /* Azul profundo */
+    letter-spacing: 2px;
+}
+
+.slogan-logo {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: #65705A; /* Verde oliva */
+}
+
+.nav-menu ul {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-menu a {
+    font-size: 14px;
+    font-weight: 500;
+    color: #174783;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #65705A;
+}
+
+/* ======================================================
+   4. ESTILOS DE BOTONES GLOBALES
+   ====================================================== */
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    border: none;
+}
+
+.btn-primario {
+    background-color: #174783; /* Azul profundo */
+    color: #ffffff;
+}
+
+.btn-primario:hover {
+    background-color: #0f2e56;
+}
+
+.btn-secundario {
+    background-color: transparent;
+    color: #174783;
+    border: 1.5px solid #174783;
+}
+
+.btn-secundario:hover {
+    background-color: #174783;
+    color: #ffffff;
+}
+
+
+/* ======================================================
+   5. SECCIÓN PORTADA / HERO 
+   ====================================================== */
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 0;
+    background-color: #FAF6F2;
+}
+
+.hero-texto {
+    max-width: 800px;
+    padding: 0 20px;
+    margin-bottom: 40px;
+}
+
+.hero-texto h2 {
+    font-size: 54px;
+    color: #174783;
+    line-height: 1.15;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+    font-weight: 700; /* Letras gruesas y con presencia */
+}
+
+.hero-texto p {
+    font-size: 15px;
+    color: #4a4a4a;
+    margin-bottom: 30px;
+}
+
+.botones-hero {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.hero-imagen {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.hero-imagen img {
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    object-position: center 85%; /* Baja el foco para que entre el salmón completo */
+    display: block;
+}
+/* En celulares ajustamos tamaño y posición */
+@media screen and (max-width: 768px) {
+    .texto-flotante-hero {
+        right: 5%;
+        bottom: 12%;
+    }
+    
+    .texto-flotante-hero p {
+        font-size: 22px;
+    }
+}
+
+/* ======================================================
+   6. SECCIÓN NOSOTROS (ALEX Y FACU)
+   ====================================================== */
+.seccion-nosotros {
+    padding: 70px 10%;
+    text-align: center;
+    background-color: #f7f3ee; /* Fondo claro para dar respiro */
+}
+
+.seccion-nosotros h3 {
+    font-size: 32px;
+    color: #174783;
+    margin-bottom: 8px;
+}
+
+.seccion-nosotros .subtitulo {
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #65705A;
+    margin-bottom: 25px;
+}
+
+.texto-nosotros {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.texto-nosotros p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.texto-nosotros .cita-esencia {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    font-style: italic;
+    color: #174783;
+    margin-bottom: 30px;
+}
+
+/* ======================================================
+   7. SECCIÓN MENÚ DE VIANDAS (TARJETAS)
+   ====================================================== */
+.seccion-viandas {
+    padding: 70px 8%;
+    background-color:#E8DFD1;
+}
+
+.encabezado-seccion {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.encabezado-seccion h3 {
+    font-size: 34px;
+    color: #174783;
+}
+
+.encabezado-seccion p {
+    font-size: 15px;
+    color: #65705A;
+}
+
+.contenedor-platos {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.tarjeta-plato {
+    flex: 1;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    padding-bottom: 25px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tarjeta-plato img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 18px;
+}
+
+.tarjeta-plato h4 {
+    font-size: 20px;
+    color: #174783;
+    margin-bottom: 8px;
+    padding: 0 15px;
+}
+
+.descripcion-plato {
+    font-size: 14px;
+    color: #666;
+    padding: 0 15px;
+    margin-bottom: 20px;
+}
+
+.tarjeta-plato .btn {
+    align-self: center;
+}
+
+/* ======================================================
+   8. SECCIÓN CATERING Y FORMULARIO
+   ====================================================== */
+.seccion-catering {
+    display: flex;
+    gap: 50px;
+    padding: 80px 8%;
+    background-color: #FAF6F2;
+    align-items: flex-start;
+}
+
+.catering-info {
+    flex: 1;
+}
+
+.catering-info h3 {
+    font-size: 34px;
+    color: #174783;
+    margin-bottom: 12px;
+}
+
+.destacado-catering {
+    font-size: 18px;
+    font-style: italic;
+    color: #65705A;
+    margin-bottom: 20px;
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.catering-formulario {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 35px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.catering-formulario h4 {
+    font-size: 24px;
+    color: #174783;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#formCatering label {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 6px;
+    color: #333;
+}
+
+#formCatering input,
+#formCatering textarea {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+#formCatering input:focus,
+#formCatering textarea:focus {
+    outline: none;
+    border-color: #174783;
+}
+
+#formCatering .btn {
+    width: 100%;
+    margin-top: 5px;
+}
+
+.mensaje-exito {
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+}
+/* ======================================================
+   9. RESEÑAS (FONDO OSCURO) Y CONTACTO
+   ====================================================== */
+.seccion-resenas {
+    background-color: #174783; /* Azul profundo oscuro */
+    color: #ffffff;
+    padding: 70px 8%;
+    text-align: center;
+}
+
+.seccion-resenas h3 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+.carrusel-resenas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.tarjeta-resena {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 30px 40px;
+    border-radius: 8px;
+    flex: 1;
+}
+
+.texto-comentario {
+    font-size: 17px;
+    font-style: italic;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.autor-comentario {
+    font-size: 15px;
+    color: #E8DFD1;
+    letter-spacing: 1px;
+}
+
+.btn-flecha {
+    background-color: transparent;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.btn-flecha:hover {
+    background-color: #ffffff;
+    color: #174783;
+}
+
+.seccion-contacto {
+    padding: 70px 8%;
+    text-align: center;
+    background-color: #E8DFD1;
+}
+
+.seccion-contacto h3 {
+    font-size: 34px;
+    color: #174783;
+    margin-bottom: 15px;
+}
+
+.seccion-contacto p {
+    font-size: 16px;
+    color: #444;
+}
+
+.btn-whatsapp {
+    display: inline-block;
+    margin-top: 25px;
+    background-color: #65705A; /* Verde oliva */
+    color: #ffffff;
+    padding: 14px 28px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+    transition: background 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+    background-color: #4f5846;
+}
+
+/* ======================================================
+   10. FOOTER PRINCIPAL
+   ====================================================== */
+.footer-principal {
+    background-color: #0f2e56; /* Azul profundo más oscuro */
+    color: #E8DFD1;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.logo-footer {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.sub-footer {
+    font-size: 11px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+    color: #a8b8cc;
+}
+
+.ubicacion, .redes {
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+
+/* ======================================================
+   11. RESPONSIVE CON MEDIA QUERIES (TABLET Y CELULAR)
+   ====================================================== */
+@media screen and (max-width: 768px) {
+    .header-principal {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .nav-menu ul {
+        gap: 15px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 6%;
+    }
+
+    .botones-hero {
+        justify-content: center;
+    }
+
+    .contenedor-platos {
+        flex-direction: column;
+    }
+
+    .seccion-catering {
+        flex-direction: column;
+        padding: 50px 6%;
+    }
+
+    .carrusel-resenas {
+        flex-direction: row;
+        width: 100%;
+    }
+}
+/* ======================================================
+   AJUSTE DE VIANDAS Y FORMULARIO (FLEXBOX)
+   ====================================================== */
+.contenedor-platos {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.tarjeta-plato {
+    flex: 1;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.tarjeta-plato h4 {
+    margin: 15px 0 8px;
+    font-size: 20px;
+    color: #174783;
+}
+
+.tarjeta-plato p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 18px;
+}
+
+.seccion-catering {
+    display: flex;
+    gap: 40px;
+    padding: 60px 8%;
+    background-color: #f7f3ee;
+}
+
+.catering-info, .catering-formulario {
+    flex: 1;
+}
+
+#formCatering label {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 4px;
+    font-weight: 500;
+}
+
+#formCatering input, #formCatering textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: inherit;
+}
+/* Foto y diseño de Nosotros */
+.contenedor-nosotros {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    max-width: 900px;
+    margin: 30px auto 0;
+}
+
+.foto-nosotros {
+    flex: 1;
+}
+
+.foto-nosotros img {
+    width: 100%;
+    max-width: 350px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.contenedor-nosotros .texto-nosotros {
+    flex: 1;
+    text-align: left;
+}
+
+@media screen and (max-width: 768px) {
+    .contenedor-nosotros {
+        flex-direction: column;
+        text-align: center;
+    }
+    .contenedor-nosotros .texto-nosotros {
+        text-align: center;
+    }
+}
+/* ======================================================
+   RESPONSIVE DESIGN (MOBILE)
+   ====================================================== */
+@media screen and (max-width: 768px) {
+    /* Header adaptado */
+    .header-principal {
+        padding: 15px 5%;
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+
+    .navegacion ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 14px;
+        padding: 0;
+    }
+
+    .navegacion a {
+        font-size: 13px;
+    }
+
+    /* Portada / Hero */
+    .hero {
+        padding-top: 35px;
+    }
+
+    .hero-texto h2 {
+        font-size: 32px;
+        line-height: 1.2;
+    }
+
+    .hero-texto p {
+        font-size: 14px;
+        margin-bottom: 22px;
+    }
+
+    .botones-hero {
+        flex-direction: column;
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
+        gap: 10px;
+    }
+
+    .hero-imagen img {
+        height: 260px;
+    }
+
+    /* Sección Nosotros */
+    .seccion-nosotros {
+        padding: 50px 6%;
+    }
+
+    .contenedor-nosotros {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
+
+    /* Viandas: se apilan una debajo de otra */
+    .seccion-viandas {
+        padding: 50px 6%;
+    }
+
+    .contenedor-platos {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    /* Catering: se apila verticalmente */
+    .seccion-catering {
+        flex-direction: column;
+        padding: 50px 6%;
+        gap: 35px;
+    }
+
+    .catering-formulario {
+        width: 100%;
+        padding: 25px 20px;
+    }
+}
